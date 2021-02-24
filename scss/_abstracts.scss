@@ -1,0 +1,42 @@
+/* FONTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@300&display=swap");
+
+/* VARIABLES */
+$primary-font: "Bangers", cursive;
+$secondary-font: "Open Sans", sans-serif;
+$primary-color: #e60000;
+$secondary-color: #0d0d0d;
+$date-color: #ffa500;
+$comment-color: #00b3b3;
+$gray-color: #bcbcbc;
+$light-color: #f2f2f2;
+
+/* UTILITIES */
+.bg-dark {
+  background-color: $secondary-color;
+}
+
+.bg {
+  &-dark {
+    background-color: $secondary-color;
+  }
+  &-light {
+    background-color: $light-color;
+  }
+}
+
+.ml {
+  // ml-2
+  &-2 {
+    margin-left: 2rem;
+  }
+}
+
+/* MIXINS */
+
+@mixin flex-display($display, $align-items, $justify-content) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
