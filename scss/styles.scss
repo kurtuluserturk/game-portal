@@ -27,9 +27,17 @@ main {
 }
 
 .container {
-  max-width: 160rem;
+  max-width: 110rem;
   margin: 0 auto;
   width: 100%;
+
+  @include media(extra-large) {
+    max-width: 100rem;
+  }
+
+  @include media(large) {
+    max-width: 90rem;
+  }
 }
 
 section {

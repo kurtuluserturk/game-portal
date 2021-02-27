@@ -110,7 +110,7 @@
 
 /* REVIEWS */
 .review {
-  padding: 5rem;
+  padding: 1.6rem;
   font-size: 1.8rem;
   line-height: 1.8;
   margin-left: 10rem;
@@ -355,9 +355,21 @@ main {
 }
 
 .container {
-  max-width: 160rem;
+  max-width: 110rem;
   margin: 0 auto;
   width: 100%;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 100rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 90rem;
+  }
 }
 
 section {
