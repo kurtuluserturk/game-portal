@@ -9,8 +9,9 @@ $primary-color: #e60000;
 $secondary-color: #0d0d0d;
 $date-color: #ffa500;
 $comment-color: #00b3b3;
-$gray-color: #bcbcbc;
+$gray-color: #969696;
 $light-color: #f2f2f2;
+$general-transition: all 0.4s;
 
 /* UTILITIES */
 .bg-dark {
@@ -33,10 +34,51 @@ $light-color: #f2f2f2;
   }
 }
 
+.mt {
+  &-3 {
+    margin-top: 3rem;
+  }
+}
+
+.m {
+  &-1 {
+    margin: 1rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
 /* MIXINS */
 
 @mixin flex-display($display, $align-items, $justify-content) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@mixin media($screen-size) {
+  @if ($screen-size==extra-large) {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+  @if ($screen-size==large) {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+
+  @if ($screen-size==medium) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if ($screen-size==small) {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
 }

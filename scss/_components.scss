@@ -1,12 +1,21 @@
+/* BUTTONS */
+
 .btn {
   background-color: $light-color;
   color: $primary-color;
   padding: 1rem 2rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   letter-spacing: 4px;
   border: none;
   outline: none;
   transition: all 0.4s;
+
+  @include media(medium) {
+    padding: 0.5rem 1rem;
+    :not(:first-child) {
+      margin-right: 1rem;
+    }
+  }
 
   &:hover {
     background-color: $primary-color;
@@ -22,5 +31,200 @@
       background-color: $light-color;
       color: $primary-color;
     }
+  }
+}
+
+/* BADGES */
+
+.badge {
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin: 4rem 2rem 4rem 4rem;
+  background-color: $primary-color;
+  color: $light-color;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+
+  &-tech {
+    background-color: $comment-color;
+  }
+
+  &-game {
+    background-color: $date-color;
+  }
+}
+
+/* RATING */
+
+.rating {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 1rem;
+  left: 1rem;
+  background-color: $light-color;
+  opacity: 0;
+  z-index: 1;
+  line-height: 3rem;
+  font-size: 1.4rem;
+  font-family: $secondary-font;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  color: $primary-color;
+  transition: all 0.4s;
+}
+
+/* REVIEWS */
+
+.review {
+  padding: 5rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-left: 10rem;
+  border-left: 2px solid $primary-color;
+  border-bottom: 2px solid $primary-color;
+  transform: skew(-24deg);
+
+  @include media(extra-large) {
+    transform: skew(0deg);
+    border: none;
+    margin-left: 0;
+    font-size: 1.3rem;
+  }
+
+  & > * {
+    transform: skew(24deg);
+
+    @include media(extra-large) {
+      transform: skew(0deg);
+    }
+  }
+
+  &-tags {
+    font-size: 1.5rem;
+    color: $light-color;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    margin: 1rem 0;
+  }
+
+  &-user {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 8rem;
+      margin-right: 3rem;
+      border-radius: 50%;
+    }
+
+    &-detail {
+      font-family: $primary-font;
+      margin-right: 3rem;
+
+      .review-user-name {
+        color: $primary-color;
+        letter-spacing: 2px;
+      }
+      .review-user-date {
+        color: $date-color;
+      }
+    }
+
+    &-platform {
+      :not(:last-child) {
+        color: $primary-color;
+      }
+
+      .fab {
+        margin: 0 1rem;
+      }
+    }
+
+    &-rating {
+      margin-left: auto;
+
+      @include media(small) {
+        margin-left: 0;
+      }
+
+      .checked {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/* CARDS */
+
+.card {
+  height: 45rem;
+  perspective: 2000px;
+
+  @include media(large) {
+    height: 35rem;
+  }
+  @include media(medium) {
+    height: 30rem;
+  }
+
+  @include media(small) {
+    height: 25rem;
+  }
+
+  &-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: all 1s;
+  }
+
+  .card-front {
+    background-color: $primary-color;
+  }
+
+  .card-back {
+    background-color: $secondary-color;
+    transform: rotateY(180deg);
+    display: table;
+
+    &-content {
+      display: table-cell;
+      vertical-align: middle;
+
+      p {
+        font-size: 1.8rem;
+      }
+
+      a {
+        transition: $general-transition;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  &:hover .card-front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover .card-back {
+    transform: rotateY(0);
   }
 }

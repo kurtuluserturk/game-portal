@@ -1,0 +1,19 @@
+@keyframes mainAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(8rem);
+    border-top: 0px solid $light-color;
+    border-bottom: 0px solid $light-color;
+  }
+
+  50% {
+    transform: translateY(-8rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    border-top: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+  }
+}
