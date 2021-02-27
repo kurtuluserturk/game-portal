@@ -1011,6 +1011,11 @@ img {
       padding: 4rem;
       flex-direction: column;
 
+      @include media(extra-small) {
+        padding: 2rem;
+        margin-right: 1rem;
+      }
+
       h3 {
         color: $light-color;
       }

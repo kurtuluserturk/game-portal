@@ -1639,6 +1639,13 @@ img {
           flex-direction: column;
 }
 
+@media (max-width: 426px) {
+  .contact-content-detail {
+    padding: 2rem;
+    margin-right: 1rem;
+  }
+}
+
 .contact-content-detail h3 {
   color: #f2f2f2;
 }
