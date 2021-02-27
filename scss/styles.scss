@@ -1014,6 +1014,7 @@ img {
       @include media(extra-small) {
         padding: 2rem;
         margin-right: 1rem;
+        margin-top: -2rem;
       }
 
       h3 {

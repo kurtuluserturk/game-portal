@@ -1643,6 +1643,7 @@ img {
   .contact-content-detail {
     padding: 2rem;
     margin-right: 1rem;
+    margin-top: -2rem;
   }
 }
 
