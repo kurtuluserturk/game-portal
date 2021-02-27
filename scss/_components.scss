@@ -179,6 +179,10 @@
     height: 22rem;
   }
 
+  @include media(extra-small) {
+    height: 16.2rem;
+  }
+
   &-inner {
     position: relative;
     width: 100%;
@@ -199,6 +203,12 @@
 
   .card-front {
     background-color: $primary-color;
+
+    h4 {
+      @include media(extra-small) {
+        font-size: 1.6rem;
+      }
+    }
   }
 
   .card-back {

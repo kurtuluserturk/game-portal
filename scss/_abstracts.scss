@@ -81,4 +81,10 @@ $general-transition: all 0.4s;
       @content;
     }
   }
+
+  @if ($screen-size==extra-small) {
+    @media (max-width: 426px) {
+      @content;
+    }
+  }
 }

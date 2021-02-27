@@ -61,18 +61,6 @@ h5 {
   color: $primary-color;
   letter-spacing: 3px;
   font-weight: 300;
-
-  @include media(large) {
-    color: #198d19;
-  }
-
-  @include media(medium) {
-    color: #0000d9;
-  }
-
-  @include media(small) {
-    color: #d9d900;
-  }
 }
 
 h1 {
