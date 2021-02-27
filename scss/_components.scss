@@ -161,18 +161,22 @@
 /* CARDS */
 
 .card {
-  height: 45rem;
+  height: 38rem;
   perspective: 2000px;
 
+  @include media(extra-large) {
+    height: 34rem;
+  }
+
   @include media(large) {
-    height: 35rem;
+    height: 32rem;
   }
   @include media(medium) {
-    height: 30rem;
+    height: 27rem;
   }
 
   @include media(small) {
-    height: 25rem;
+    height: 22rem;
   }
 
   &-inner {

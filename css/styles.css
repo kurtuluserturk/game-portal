@@ -205,26 +205,32 @@
 
 /* CARDS */
 .card {
-  height: 45rem;
+  height: 38rem;
   -webkit-perspective: 2000px;
           perspective: 2000px;
 }
 
+@media (max-width: 1280px) {
+  .card {
+    height: 34rem;
+  }
+}
+
 @media (max-width: 992px) {
   .card {
-    height: 35rem;
+    height: 32rem;
   }
 }
 
 @media (max-width: 768px) {
   .card {
-    height: 30rem;
+    height: 27rem;
   }
 }
 
 @media (max-width: 576px) {
   .card {
-    height: 25rem;
+    height: 22rem;
   }
 }
 
@@ -1571,7 +1577,7 @@ img {
 
 @media (max-width: 992px) {
   .team-members .team-member:first-child {
-    margin-right: 3rem;
+    margin-right: 1.5rem;
   }
 }
 
@@ -1593,7 +1599,7 @@ img {
 
 @media (max-width: 992px) {
   .team-members .team-member:last-child {
-    margin-left: 3rem;
+    margin-left: 1.5rem;
   }
 }
 

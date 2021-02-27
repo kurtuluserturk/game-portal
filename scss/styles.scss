@@ -965,7 +965,7 @@ img {
       margin-right: 5rem;
 
       @include media(large) {
-        margin-right: 3rem;
+        margin-right: 1.5rem;
       }
 
       @include media(medium) {
@@ -981,7 +981,7 @@ img {
       margin-left: 5rem;
 
       @include media(large) {
-        margin-left: 3rem;
+        margin-left: 1.5rem;
       }
 
       @include media(medium) {
