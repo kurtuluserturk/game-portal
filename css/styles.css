@@ -205,7 +205,7 @@
 
 /* CARDS */
 .card {
-  height: 38rem;
+  height: 40rem;
   -webkit-perspective: 2000px;
           perspective: 2000px;
 }
