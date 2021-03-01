@@ -64,6 +64,7 @@ $general-transition: all 0.4s;
       @content;
     }
   }
+
   @if ($screen-size==large) {
     @media (max-width: 992px) {
       @content;
